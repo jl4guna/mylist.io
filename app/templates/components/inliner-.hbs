@@ -1,0 +1,7 @@
+{{#if isEditing}}
+    {{autofocus-input length='30' value=value}}
+{{else}}
+    <span class="{{if isCompleted "striked"}}">
+        {{value}}
+    </span>
+{{/if}}

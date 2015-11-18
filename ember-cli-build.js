@@ -1,6 +1,8 @@
 /*jshint node:true*/
 /* global require, module */
+var Funnel = require('broccoli-funnel');
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var mergeTrees = require('ember-cli/node_modules/broccoli-merge-trees');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -20,5 +22,25 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  app.import('bower_components/Materialize/dist/css/materialize.min.css');
+  app.import('bower_components/Materialize/dist/js/materialize.min.js');
+
+  app.import('bower_components/font-awesome/css/font-awesome.min.css');
+  // app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2');
+
+  app.import('bower_components/Materialize/dist/js/materialize.min.js');
+
+  var fontawesomeTree = new Funnel('bower_components/font-awesome/fonts', {
+    srcDir: '/',
+    destDir: 'fonts'
+  });
+
+  var materializeTree = new Funnel('bower_components/Materialize/dist/font', {
+    srcDir: '/',
+    destDir: 'font'
+  });
+
+  return app.toTree(mergeTrees([app.toTree(), fontawesomeTree, materializeTree], {
+    overwrite: true
+  }));
 };

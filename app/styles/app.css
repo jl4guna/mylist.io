@@ -1,0 +1,66 @@
+html {
+    font-size: 18px;
+}
+
+.controls- {
+    font-size: 28px;
+}
+
+.controls- .btn-flat.disabled {
+    color: #b3b3b3;
+}
+
+.controls- .btn-flat {
+    color: #26a69a;
+}
+
+.controls- button.fa {
+    padding: 0 0.2em;
+}
+
+.epic-checkbox {
+    font-size: 28px;
+    margin-right: 0.25em;
+    vertical-align: middle;
+}
+
+.input_text input {
+    height: 2rem;
+    margin: 0;
+}
+
+.completed {
+    color: #ccc;
+}
+
+.collection-item {
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.collection-item.large {
+    padding-bottom: 1.5em;
+}
+
+.unsaved {
+    background-color: #ffffee !important;
+}
+
+.striked {
+    position: relative;
+    display: inline-block;
+}
+
+.striked:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid #ddd;
+    height: calc(50% - 1px);
+    width: 100%;
+    transform: rotateZ(-4deg);
+}

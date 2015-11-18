@@ -1,0 +1,10 @@
+<div class="secondary-content">
+    <button class="fa fa-floppy-o waves-effect waves-light btn-flat {{if areSaveAndRestoreDisabled "disabled"}}" {{action "save"}} {{bind-attr disabled="areSaveAndRestoreDisabled"}}>
+    </button>
+
+    <button class="fa fa-undo waves-effect waves-light btn-flat {{if areSaveAndRestoreDisabled "disabled"}}" {{action "restore"}} {{bind-attr disabled="areSaveAndRestoreDisabled"}}>
+    </button>
+
+    <button class="fa fa-trash waves-effect waves-light btn-flat" {{action "delete"}}>
+    </button>
+</div>
