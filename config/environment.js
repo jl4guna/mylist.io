@@ -31,6 +31,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.host = 'http://127.0.0.1:3000';
   }
 
   if (environment === 'test') {
@@ -43,10 +44,11 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.host = 'http://127.0.0.1:3000';
   }
 
   if (environment === 'production') {
-
+    ENV.host = 'http://api.mylist.io';
   }
 
   return ENV;
