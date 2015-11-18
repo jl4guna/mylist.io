@@ -18,11 +18,11 @@
     {{/each}}
 </ul>
 
-<button class="fa fa-floppy-o waves-effect waves-light btn {{if areDirtyItems "disabled"}}" {{action "saveAll"}} {{bind-attr disabled="areDirtyItems"}}>
+<button class="fa fa-floppy-o waves-effect waves-light btn {{if areDirtyItems "disabled"}}" disabled="{{if areDirtyItems true null}}" {{action "saveAll"}}>
     Save All
 </button>
 
-<button class="fa fa-undo waves-effect waves-light btn {{if areDirtyItems "disabled"}}" {{action "restoreAll"}} {{bind-attr disabled="areDirtyItems"}}>
+<button class="fa fa-undo waves-effect waves-light btn {{if areDirtyItems "disabled"}}" disabled="{{if areDirtyItems true null}}" {{action "restoreAll"}}>
     Restore All
 </button>
 

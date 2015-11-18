@@ -17,15 +17,6 @@ export default Ember.Controller.extend({
         item.save();
     },
 
-    updateSortOrder: function(indexes) {
-        this.beginPropertyChanges();
-        this.forEach(function(item) {
-            var index = indexes[item.get('id')];
-            item.set('sort', index);
-        }, this);
-        this.endPropertyChanges();
-    },
-
     actions: {
         add: function() {
             let newTodo = this.get('store').createRecord('todo', {
@@ -36,7 +27,7 @@ export default Ember.Controller.extend({
 
         restoreAll: function() {
             this.get('model').forEach(item => {
-                item.rollbackAttributes()
+                item.rollbackAttributes();
             });
         },
 
