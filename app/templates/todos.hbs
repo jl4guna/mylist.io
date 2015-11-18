@@ -1,32 +1,30 @@
-<ul class="collection with-header">
-    <li class="collection-header">
-        <h4>ToDos</h4>
-    </li>
+<h5>My List</h5>
 
+<div class="table s12 l8">
     {{#each model as |todo|}}
-        <li class="collection-item row {{if todo.isEditing "large"}} {{if todo.isCompleted "completed"}} {{if todo.hasDirtyAttributes "unsaved"}}">
-            <div class="col s1">
+        <div class="row item valign-wrapper {{if todo.isCompleted "completed"}} {{if todo.hasDirtyAttributes "yellow lighten-5"}} {{if todo.isEditing "large"}}">
+            <div class="col s2 m1 valign">
                 {{epic-checkbox value=todo.isCompleted}}
             </div>
-            <div class="col s7">
+            <div class="col s8 m7 valign">
                 {{inliner- value=todo.title isEditing=todo.isEditing isCompleted=todo.isCompleted}}
             </div>
-            <div class="col s4">
+            <div class="col s12 m4 valign">
                 {{controls- todo=todo save=saveItem delete=deleteItem restore=restoreItem}}
             </div>
-        </li>
+        </div>
     {{else}}
-        <li class="collection-item">
-            <span>Uh... No items added yet :(</span>
-        </li>
+        <tr>
+            <td>Uh... No items added yet :(</td>
+        </tr>
     {{/each}}
-</ul>
+</div>
 
-<button class="fa fa-floppy-o waves-effect waves-light btn {{if areDirtyItems "disabled"}}" disabled="{{if areDirtyItems true null}}" {{action "saveAll"}}>
+<button class="fa fa-floppy-o waves-effect waves-yellow btn blue accent-1 {{if areDirtyItems "disabled"}}" disabled="{{if areDirtyItems true null}}" {{action "saveAll"}}>
     Save All
 </button>
 
-<button class="fa fa-undo waves-effect waves-light btn {{if areDirtyItems "disabled"}}" disabled="{{if areDirtyItems true null}}" {{action "restoreAll"}}>
+<button class="fa fa-undo waves-effect waves-red btn blue accent-1 {{if areDirtyItems "disabled"}}" disabled="{{if areDirtyItems true null}}" {{action "restoreAll"}}>
     Restore All
 </button>
 

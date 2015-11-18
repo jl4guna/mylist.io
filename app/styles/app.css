@@ -2,6 +2,36 @@ html {
     font-size: 18px;
 }
 
+h5 {
+    margin-bottom: 1em;
+}
+
+.table {
+    margin-bottom: 2em;
+}
+
+.table .item {
+    border-bottom: 1px #eee solid;
+    margin-bottom: 0;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.table .item:first-child {
+    border-top: 1px #eee solid;
+}
+
+.table .item.completed {
+    color: #ccc;
+}
+
+.table .item.large {
+    padding-bottom: 1.5em;
+}
+
 .controls- {
     font-size: 28px;
 }
@@ -27,26 +57,6 @@ html {
 .input_text input {
     height: 2rem;
     margin: 0;
-}
-
-.completed {
-    color: #ccc;
-}
-
-.collection-item {
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    -ms-transition: all .3s ease-out;
-    transition: all .3s ease-out;
-}
-
-.collection-item.large {
-    padding-bottom: 1.5em;
-}
-
-.unsaved {
-    background-color: #ffffee !important;
 }
 
 .striked {
