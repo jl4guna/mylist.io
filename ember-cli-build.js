@@ -26,9 +26,6 @@ module.exports = function(defaults) {
   app.import('bower_components/Materialize/dist/js/materialize.min.js');
 
   app.import('bower_components/font-awesome/css/font-awesome.min.css');
-  // app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2');
-
-  app.import('bower_components/Materialize/dist/js/materialize.min.js');
 
   var fontawesomeTree = new Funnel('bower_components/font-awesome/fonts', {
     srcDir: '/',

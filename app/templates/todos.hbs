@@ -15,6 +15,10 @@
                 {{controls- todo=todo save=saveItem delete=deleteItem restore=restoreItem}}
             </div>
         </li>
+    {{else}}
+        <li class="collection-item">
+            <span>Uh... No items added yet :(</span>
+        </li>
     {{/each}}
 </ul>
 

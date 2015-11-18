@@ -20,7 +20,7 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'connect-src': "'self' 'unsafe-inline' 127.0.0.1:3000",
+      'connect-src': "'self' 'unsafe-inline' 127.0.0.1:3000 api.mylist.io",
       'style-src': "'self' 'unsafe-inline'"
     }
   };

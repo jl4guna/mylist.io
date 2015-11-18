@@ -1,9 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
-    host: 'http://127.0.0.1:3000',
+    host: 'http://api.mylist.io',
 
-    namespace: 'api',
+    namespace: 'v1',
 
     shouldReloadAll: function shouldReloadAll(store, snapshot) {
         return !store.peekAll(snapshot.type.modelName).length;
